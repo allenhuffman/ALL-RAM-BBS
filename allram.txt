@@ -1,15 +1,13 @@
+Brief *ALL RAM* BBS Operating Instructions:
+Documentation and Programs Copyright (C) 1983,2023 by Allen C. Huffman
+Public Release:  May 1988
 
+V1.1 - Added support for LOAD/SAVE to DISK.
 
-
-
-                  Brief *ALL RAM* BBS Operating Instructions:
-       Documentation and Programs Copyright (C) 1983 by Allen C. Huffman
-                           Public Release:  May 1988
-
-The *ALL RAM* BBS System requires a 32k+ Extended Basic CoCo to operate and
+The *ALL RAM* BBS System requires a 32k+ Extended BASIC CoCo to operate and
 consists of two programs:  EDITOR, and *ALLRAM*.  (An auto-answer modem, and a
 remote driver such as REMOTE2 from The Rainbow, is also required for on-line
-operation.)
+operation.) As of v1.1, a disk drive is now supported.
 
 
 STARTING UP:
@@ -21,25 +19,38 @@ a few seconds before the menu appears.  This is a short M/L routine temporarily
 stored on the screen that does a PCLEAR 0 to clear out space for the system
 files.
 
+At the "T)APE OR D)ISK" prompt, select which device you want to load or save
+the userlog to/from.
+
 Select option #1 (Create Userlog), then enter the name of the SYStem OPerator. 
 Next, enter the password you will use to access the system.  If you typed in
 everything correctly, type "Y" at the verify prompt, otherwise type "N" and
 retry.
 
-You will now have to save the userlog to tape.  Do this by using option #3
-(Save Userlog/Message Base) from the main menu.  Insert a blank tape, or use
-the back side of the tape the BBS is on, and get it ready to save.  (IE, get
-past the leader, press record and play.)  Then press ENTER and the userlog will
-be saved to tape along with the empty message base.  Use option #8 to exit to
-basic.
+You will now have to save the userlog to tape/disk.  Do this by using option #3
+(Save Userlog/Message Base) from the main menu.
+
+FOR TAPE: Insert a blank tape, or use the back side of the tape the BBS is on,
+and get it ready to save.  (IE, get past the leader, press record and play.)
+
+FOR DISK: Have a previously formatted disk inserted in to drive 0.
+
+Rress ENTER and the userlog will be saved to tape/disk along with the empty
+message base.  Use option #8 to exit to BASIC.
 
 
 RUNNING THE BBS:
 
 Load and run the second program, *ALLRAM*.  You will once again see the garbage
-on the screen followed by a promt asking you to ready the data tape for
-loading.  Rewind the tape with the system files on it and press play.  Now hit
-ENTER and the BBS will load in the userlog and message base, then start up.
+on the screen followed by a promt asking you to ready the data tape/disk for
+loading.
+
+FOR TAPE: Rewind the tape with the system files on it and press play.
+
+FOR DISK: Insert the disk with the userlog/message base in drive 0.
+
+Now hit ENTER and the BBS will load in the userlog and message base, then
+start up.
 
 
 USING THE BBS:
@@ -98,9 +109,9 @@ SYSOP FUNTCTIONS:
 Carefully type in "?DROWSSAP" and press ENTER.  If you enter the wrong
 password, you will be sent back to the main menu.  If the password is entered
 correctly, you will be asked if you want to abort the BBS.  Type "YES" and you
-will be asked to ready the data tape.  Follow the same instructions as you did
-with the editor.  After the files are saved, you will drop into basic.  (% MUST
-be used in order to update the system files daily.)
+will be asked to ready the data tape/disk.  Follow the same instructions as you
+did with the editor.  After the files are saved, you will drop into BASIC.
+(% MUST be used in order to update the system files daily.)
 
 
 EDITOR
@@ -120,8 +131,8 @@ user #0, cannot be deleted), or E-dit him.  When editing, type in the new data,
 or press ENTER to leave it unchanged.  J-unp allows you to go to a specified
 user, and M-enu returns you to the editor menu.
 
-Be sure to save (#3) the edited files back to tape before you quit (#8), or all
-you editing will be in vain.
+Be sure to save (#3) the edited files back to tape/disk before you quit (#8),
+or all you editing will be in vain.
 
 
 CONCLUSION:
@@ -149,8 +160,9 @@ programs that can handle lower case.
 
 Future modifications to this system include software time, which will remain
 accurate since no I/O is used during on-line operations, and chat mode toggle
-(ON/OFF), as well as possible activity files written out to tape, and, last but
-not least, disk adaptions to allow many message bases and extra disk commands.
+(ON/OFF), as well as possible activity files written out to tape/disk, and,
+last but not least, disk adaptions to allow many message bases and extra disk
+commands.
 
 
 SPECIAL NOTES:
@@ -162,7 +174,7 @@ then load and run the *ALLRAM* program and you will be set.  You will have to
 add any special modem hang-up command in the logoff routine.
 
 
-MORE SPECIAL NOTES:
+MORE SPECIAL NOTES (from 1988):
 
 This program was orignally written back in 1983 and would have been marketed by
 a major software firm, but that deal never saw the light of day.  As a result,
@@ -178,8 +190,9 @@ write me a letter if you use this program, or write if you have any questions
 or comments.  My current address is:
 
                Allen C. Huffman
-               110 Champions Dr. #811
-               Lufkin, TX 75901
+               PO Box 7634
+               Urbandale, IA 50323
+               www.SubEthaSoftware.com
 
 By the way, a "registered" version of this BBS (1988) is being written that
 will have a larger message base, more bells and whistles (New message read,
@@ -200,5 +213,3 @@ the anwer was a flat "NO, is just ain't possible".  I can finally change that.
 
 Enjoy, and let me know what you think of my bare-bones, very limited, but at
 least it works on tape, BBS.
-
-                                 
